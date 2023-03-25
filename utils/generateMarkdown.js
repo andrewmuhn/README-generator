@@ -32,7 +32,7 @@ const renderLicenseLink = license => {
   } else {
     return '- [License](#license)'
   }
-}
+} 
 
 // Function that returns the license section of README
 // If there is no license, return an empty string
@@ -42,7 +42,7 @@ const renderLicenseSection = license => {
  } else {
   return `## License
 
-This application is covered under by ${license};`
+This application is covered under ${license}.`
  }
 
 }
@@ -54,7 +54,8 @@ const renderinstallationSection = installation => {
 if (!installation) {
   return '';
 } else {
-  return `## Installation
+  return `
+## Installation
 
 In order to install dependencies run the following command
 > ${installation}`
@@ -77,7 +78,8 @@ const renderusageSection = usage => {
   if (!usage) {
     return '';
   } else {
-    return `## Usage
+    return `
+## Usage
 
 ${usage}`
   }
@@ -100,7 +102,8 @@ const rendercontributionSection = contribution => {
 if (!contribution) {
   return '';
 } else {
-  return `## Contributing
+  return `
+  ## Contributing
 
 ${contribution}`
 }
@@ -122,7 +125,8 @@ const rendertestSection = test => {
 if (!test) {
   return '';
 } else {
-  return `## Tests
+  return `
+  ## Tests
 
 In order to run tests run the following command(s)
 > ${test}`
@@ -159,13 +163,9 @@ ${rendertestLink(test)}
 - [Questions](#questions)
 
 ${renderinstallationSection(installation)}
-
 ${renderusageSection(usage)}
-
 ${renderLicenseSection(license)}
-
 ${rendercontributionSection(contribution)}
-
 ${rendertestSection(test)}
 
 ## Questions
@@ -175,7 +175,8 @@ If you have more question you can find more info on my github:
 [GitHub](https://github.com/${github})
 
 or contact me directly via email.
-[Contact Me](mailto:${email})
+
+[${email} ](mailto:${email})
 `
 }
 

@@ -1,35 +1,32 @@
-#  
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# README Generator
 
 ## Description
 
-
+This project was created inorder to ease the creation process for quality READMEs.
 
 ## Table of Contents
 
 - [Installation](#installation)
-
-- [License](#license)
+- [Usage](#usage)
 
 - [Tests](#tests)
 - [Questions](#questions)
 
-
 ## Installation
 
 In order to install dependencies run the following command
+
 > npm i
 
-## License
+## Usage
 
-This application is covered under MIT License.
+This project can be used by running the following command: then follow the prompts and enter in required information to have a readme generated
 
-
-  ## Tests
+## Tests
 
 In order to run tests run the following command(s)
-> npm test
+
+>
 
 ## Questions
 
@@ -39,4 +36,4 @@ If you have more question you can find more info on my github:
 
 or contact me directly via email.
 
-[a@test.com ](mailto:a@test.com)
+[andrewmuhn@gmail.com ](mailto:andrewmuhn@gmail.com)

@@ -9,12 +9,26 @@ const questions = [
   {
     type: 'input',
     message: 'What is the title of your project?',
-    name: 'title'
+    name: 'title',
+    validate: (title) => {
+      if (!title) {
+        return console.error('A valid title must be entered');
+      } else {
+        return true
+      }
+    }
   },
   {
     type: 'input',
     message: 'Describe your project?',
-    name: 'description'
+    name: 'description',
+    validate: (description) => {
+      if (!description) {
+        return console.error('A valid description username must be entered');
+      } else {
+        return true
+      }
+    }
   },
   {
     type: 'input',
@@ -58,12 +72,28 @@ const questions = [
   {
     type: 'input',
     message: 'Please enter your GitHub username?',
-    name: 'github'
+    name: 'github',
+    validate: (github) => {
+      if (!github) {
+        return console.error('A valid GitHub username must be entered');
+      } else {
+        return true
+      }
+    }
   },
   {
     type: 'input',
     message: 'Please enter your email.',
-    name: 'email'
+    name: 'email',
+    validate: (email) => {
+      valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+      if (valid) {
+        return true
+      } else {
+        console.error('A valid email must be entered')
+        return false
+      }
+    }
   }
 ];
 

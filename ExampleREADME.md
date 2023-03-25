@@ -1,41 +1,29 @@
-# <readme-Generator>
+# apples and oranges 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-abc
+
 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
+
 - [License](#license)
+
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
 npm i
 
-## Usage
 
-
-
-## Credits
-
-[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
 
 ## License
 
-
-
-## Badges
-
-
-
-## Features
-
-
-
-## How to Contribute
+This application is covered under by MIT License;
 
 
 
@@ -43,3 +31,11 @@ npm i
 
 > npm test
 
+## Questions
+
+If you have more question you can find more info on my github:
+
+[GitHub](https://github.com/)
+
+or contact me directly via email.
+[Contact Me](mailto:)

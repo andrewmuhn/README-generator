@@ -1,119 +1,149 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 const renderLicenseBadge = license => {
   console.log(license);
   switch (license) {
     case 'MIT License':
-      '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-      break;
+      return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
     case 'GNU GPLv3':
-      '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
-      break;
+      return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
     case 'GNU AGPLv3':
-      '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)'
-      break;
+      return '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)'
     case 'GNU LGPLv3':
-      '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)'
-      break;
+      return '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)'
     case 'Mozilla Public License 2.0':
-      '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
-      break;
+      return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
     case 'Apache License 2.0':
-      '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-      break;
+      return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
     case 'Boost Siftware License 1.0':
-      '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
-      break;
+      return '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
     case 'The Unlicense':
-      '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
-      break;
+      return '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
     default:
       return '';
   }
 }
 
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 // If there is no license, return an empty string
 const renderLicenseLink = license => {
-  switch (license) {
-    case 'MIT License':
-
-      break;
-    case 'GNU GPLv3':
-
-      break;
-    case 'GNU AGPLv3':
-
-      break;
-    case 'GNU LGPLv3':
-
-      break;
-    case 'Mozilla Public License 2.0':
-
-      break;
-    case 'Apache License 2.0':
-
-      break;
-    case 'Boost Siftware License 1.0':
-
-      break;
-    case 'The Unlicense':
-
-      break;
-    default:
-      return '';
+  if (license === 'No License') {
+    return '';
+  } else {
+    return '- [License](#license)'
   }
-
 }
 
-// TODO: Create a function that returns the license section of README
+// Function that returns the license section of README
 // If there is no license, return an empty string
 const renderLicenseSection = license => {
-  switch (license) {
-    case 'MIT License':
+ if (license === 'No License') {
+  return '';
+ } else {
+  return `## License
 
-      break;
-    case 'GNU GPLv3':
+This application is covered under by ${license};`
+ }
 
-      break;
-    case 'GNU AGPLv3':
+}
 
-      break;
-    case 'GNU LGPLv3':
 
-      break;
-    case 'Mozilla Public License 2.0':
+// Function that returns the installation section of README
+// If there is no installation, return an empty string
+const renderinstallationSection = installation => {
+if (!installation) {
+  return '';
+} else {
+  return `## Installation
 
-      break;
-    case 'Apache License 2.0':
+In order to install dependencies run the following command
+> ${installation}`
+}
+}
 
-      break;
-    case 'Boost Siftware License 1.0':
+// Function that returns the installation link
+// If there is no installation, return an empty string
+const renderinstallationLink = installation => {
+if (!installation) {
+  return '';
+} else {
+  return '- [Installation](#installation)'
+}
+}
 
-      break;
-    case 'The Unlicense':
+// Function that returns the usage section of README
+// If there is no usage, return an empty string
+const renderusageSection = usage => {
+  if (!usage) {
+    return '';
+  } else {
+    return `## Usage
 
-      break;
-    default:
-      return '';
+${usage}`
   }
 
 }
 
-//TODO: Create a function that returns a title in proper format
-const renderTitle = title => {
-  console.log(title);
-  return `${title.split(' ').join('-')}`;
+// Function that returns the usage link
+// If there is no usage, return an empty string
+const renderusageLink = usage => {
+if (!usage) {
+  return '';
+} else {
+  return '- [Usage](#usage)'
+}
+}
 
+// Function that returns the contribution section of README
+// If there is no contribution, return an empty string
+const rendercontributionSection = contribution => {
+if (!contribution) {
+  return '';
+} else {
+  return `## Contributing
+
+${contribution}`
+}
+}
+
+// Function that returns the contribution link
+// If there is no contribution, return an empty string
+const rendercontributionLink = contribution => {
+if (!contribution) {
+  return '';
+} else {
+  return '- [Contibuting](#contributing)'
+}
+}
+
+// Function that returns the test section of README
+// If there is no test, return an empty string
+const rendertestSection = test => {
+if (!test) {
+  return '';
+} else {
+  return `## Tests
+
+In order to run tests run the following command(s)
+> ${test}`
+}
+}
+
+// Function that returns the test link
+// If there is no test, return an empty string
+const rendertestLink = test => {
+if (!test) {
+  return '';
+} else {
+  return '- [Tests](#tests)'
+}
 }
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = ({ title, description, installation, usage, contribution, test, license, github, email }) => {
-  renderLicenseBadge(license);
-  renderLicenseLink(license);
-  renderLicenseSection(license);
-  // console.log('test inside generateMarkdown');
-  return `# <${renderTitle(title)}>
+  return `# ${title} 
+
+${renderLicenseBadge(license)}
 
 ## Description
 
@@ -121,41 +151,32 @@ ${description}
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+${renderinstallationLink(installation)}
+${renderusageLink(usage)}
+${renderLicenseLink(license)}
+${rendercontributionLink(contribution)}
+${rendertestLink(test)}
+- [Questions](#questions)
 
-## Installation
+${renderinstallationSection(installation)}
 
-${installation}
+${renderusageSection(usage)}
 
-## Usage
+${renderLicenseSection(license)}
 
-${usage}
+${rendercontributionSection(contribution)}
 
-## Credits
-
-
-
-## License
-
-
-
-## Contribution
-
-${contribution}
-
-## Tests
-
-> ${test}
-
+${rendertestSection(test)}
 
 ## Questions
 
+If you have more question you can find more info on my github:
 
+[GitHub](https://github.com/${github})
+
+or contact me directly via email.
+[Contact Me](mailto:${email})
 `
 }
-
 
 module.exports = generateMarkdown;

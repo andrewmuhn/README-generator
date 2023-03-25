@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
-const fsPromises = require('fs').promises;
+const { writeFile } = require('fs').promises;
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
@@ -50,7 +50,8 @@ const questions = [
       'Mozilla Public License 2.0',
       'Apache License 2.0',
       'Boost Siftware License 1.0',
-      'The Unlicense'
+      'The Unlicense',
+      'No License'
     ],
     loop: false
   },
@@ -68,32 +69,26 @@ const questions = [
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
-  fsPromises.writeFile(fileName, generateMarkdown(data));
-
-
+  console.log('test');
+  writeFile(fileName, generateMarkdown(data));
 }
 
-const promptUser = async () => {
-  await inquirer
+const promptUser = () => {
+  return inquirer
     .prompt(questions)
-    .then((responses) => {
-      console.log(responses);
-      const fileName = 'ExampleREADME.md';
-      writeToFile(fileName, responses)
-    })
-    .then(() => console.log('success!'))
-    .catch((err) => console.error(err));
 
 }
 
 // TODO: Create a function to initialize app
-const init = async () => {
-  try {
-    promptUser()
+const init = () => {
+  promptUser()
+    .then((responses) => {
+      // console.log(responses);
+      writeToFile('exampleREADME.md', responses)
+    })
+    .then(() => console.log('successfully wrote '))
+    .catch((err) => console.error(err));
 
-  } catch (err) {
-    console.error(err);
-  }
 }
 
 // Function call to initialize app

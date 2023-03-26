@@ -29,6 +29,10 @@ Once the project is installed it can be used by running the following command:
 
 Then follow the prompts in your CLI and enter in required information to have a readme generated. It will me called 'example.README.md'. This file can then be copied and renamed in your project repository.
 
+![Example Usage](./assets/images/Demo.gif)
+
+[link to demo video](https://drive.google.com/file/d/1xkOiRpDnTthJEjApVhJUyHSh98OAqSWC/view)
+
 ## Credits
 
 Project created by [Andrew Muhn](https://github.com/andrewmuhn)

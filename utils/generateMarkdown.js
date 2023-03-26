@@ -1,7 +1,6 @@
 // Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 const renderLicenseBadge = license => {
-  console.log(license);
   switch (license) {
     case 'MIT License':
       return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
